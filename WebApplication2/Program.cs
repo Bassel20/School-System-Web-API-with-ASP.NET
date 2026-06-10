@@ -1,3 +1,4 @@
+// Application entry point that builds and runs the web host.
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;

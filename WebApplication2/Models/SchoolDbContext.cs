@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿// EF Core database context for the school system's entities.
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,8 @@ namespace WebApplication2.Models
             Database.EnsureCreated();
         }
         public DbSet<Student> Students { get; set; }
-        public DbSet<Student> Courses { get; set; }
-        public DbSet<Student> Grades { get; set; }
+        public DbSet<AcademicYear> AcademicYears { get; set; }
+        public DbSet<Course> Courses { get; set; }
+        public DbSet<Grade> Grades { get; set; }
     }
 }

@@ -1,3 +1,4 @@
+// Configures application services (DI, EF Core, Swagger) and the HTTP request pipeline.
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -30,7 +31,7 @@ namespace WebApplication2
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<iStudentRepository, StudentRepository>();
-            services.AddDbContext<SchoolDbContext>(o => o.UseSqlite());
+            services.AddDbContext<SchoolDbContext>(o => o.UseSqlite(Configuration.GetConnectionString("SchoolDb")));
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

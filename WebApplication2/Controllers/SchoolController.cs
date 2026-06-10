@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿// API controller exposing CRUD endpoints for Student.
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -38,7 +39,7 @@ namespace WebApplication2.Controllers
             return CreatedAtAction(nameof(GetBooks), new { id = newStudent.StudentId }, newStudent);
         }
 
-        [HttpPut]
+        [HttpPut("{id}")]
         public async Task<ActionResult> PutStudents(int id, [FromBody] Student student)
         {
             if (id != student.StudentId)

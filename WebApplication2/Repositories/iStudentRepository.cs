@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Defines the data access contract for Student CRUD operations.
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;

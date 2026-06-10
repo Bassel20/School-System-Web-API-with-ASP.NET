@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Domain entity classes: Student, AcademicYear, Course, and Grade.
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
